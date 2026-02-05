@@ -10,10 +10,18 @@ Made because I got tired of spamming `print()` in brute-force / crawling / long 
 - If the message starts with `[CHECKING]` (or your custom prefix), it **updates in-place** on a single line (loading-bar vibe).
 - Otherwise, it prints a **persistent result line** (won’t be overwritten).
 
+## Install (PyPI)
+
+```bash
+python -m pip install statusline
+```
+
 ## Install (editable / dev)
 
 ```bash
-pip install -e .
+git clone https://github.com/hunhee99/statusline.git
+cd statusline
+python -m pip install -e .
 ```
 
 Tip: If you're using a specific interpreter/venv, always install with that same Python:
@@ -21,6 +29,19 @@ Tip: If you're using a specific interpreter/venv, always install with that same 
 ```bash
 python -m pip install -e .
 ```
+
+## Versioning / Release Notes
+
+- PyPI publishes versioned releases. Install a specific version like:
+
+```bash
+python -m pip install statusline==X.Y.Z
+```
+
+- Git tags match released versions. Check tags or release notes on GitHub if you need
+changelogs or want to pin a specific release.
+
+- Note: `0.1.1` removes the `enabled` argument from `StatusLine` to simplify behavior.
 
 ## Usage
 
@@ -42,39 +63,3 @@ your language server is probably using a different interpreter. Select the same 
 you used to install this package and restart the language server.
 
 ---
-
-## statusline (한국어)
-
-CLI에서 로그 찍는 게 귀찮아서 만든 초경량(의존성 없음) 상태 출력 유틸.
-브루트포스/크롤링/긴 반복문 돌릴 때 `print()` 난사하기 싫어서 만들었음.
-
-### 기능
-
-emit() 하나로 자동 분기됨:
-- 메시지가 [CHECKING](또는 커스텀 prefix)로 시작하면 한 줄에서 계속 갱신됨(로딩바 느낌)
-- 그 외 메시지는 결과 로그로 확정 출력되어 절대 안 지워짐
-
-### 설치 (editable / 개발용)
-
-```bash
-pip install -e .
-```
-
-팁: 인터프리터/venv를 쓰고 있다면, 항상 같은 파이썬으로 설치해야 함:
-
-```bash
-python -m pip install -e .
-```
-
-### 사용법
-
-```python
-from statusline import StatusLine
-
-st = StatusLine()  # StatusLine(checking_prefix="[PROGRESS]") 처럼 prefix 변경도 가능
-
-st.emit("[CHECKING] 뭐시기...")     # 같은 줄에서 계속 갱신됨
-st.emit("[CHECKING] 더 뭐시기...")
-
-st.emit("지워지지 말거라!")         # 결과는 개행으로 확정 출력(안 사라짐)
-```
