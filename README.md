@@ -36,7 +36,7 @@ st.emit("do not erase this line!")   # printed as a normal line (kept on screen)
 ```
 
 ### Notes
-- Prefix matching is simple string logic: msg.startswith(checking_prefix).
+- Prefix matching is simple string logic: `msg.startswith(checking_prefix)`.
 - If your editor (e.g., VSCode/Pylance) shows missing-import warnings while it still runs,
 your language server is probably using a different interpreter. Select the same interpreter
 you used to install this package and restart the language server.
@@ -46,7 +46,7 @@ you used to install this package and restart the language server.
 ## statusline (한국어)
 
 CLI에서 로그 찍는 게 귀찮아서 만든 초경량(의존성 없음) 상태 출력 유틸.
-브루트포스/크롤링/긴 반복문 돌릴 때 print() 난사하기 싫어서 만들었음.
+브루트포스/크롤링/긴 반복문 돌릴 때 `print()` 난사하기 싫어서 만들었음.
 
 ### 기능
 

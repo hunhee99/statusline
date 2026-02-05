@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Tiny single-line status updater for CLI"
 readme = "README.md"
 requires-python = ">=3.9"
-license = {text = "MIT"}
+license = {file = "LICENSE"}
 authors = [
   {name = "Hunhee Choi", email = "hunhee9982@gmail.com"}
 ]
