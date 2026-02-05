@@ -1,13 +1,29 @@
 # statusline
 
-A tiny, dependency-free status logger for CLI scripts.  
-Made because I got tired of spamming `print()` in brute-force / crawling / long loops.
+Tiny, dependency-free **single-line status logger** for brute-forcing / crawling / long loops.  
+Use it when you want **live progress on one line** but keep **important results printed permanently**.
+
+## Demo
+
+### Without statusline (print spam)
+
+![Without statusline](https://raw.githubusercontent.com/hunhee99/statusline/main/assets/unuse_statusline.gif)
+
+### With statusline
+
+![With statusline](https://raw.githubusercontent.com/hunhee99/statusline/main/assets/use_statusline.gif)
+
+> **Idea:**  
+> - Messages starting with `[CHECKING]` update **in-place** on a single line (in-place/single-line status).  
+> - Anything else is printed as a **persistent result line** (won’t be overwritten).
+
+---
 
 ## What it does
 
 `emit()` routes your message automatically:
 
-- If the message starts with `[CHECKING]` (or your custom prefix), it **updates in-place** on a single line (loading-bar vibe).
+- If the message starts with `[CHECKING]` (or your custom prefix), it **updates in-place** on a single line.
 - Otherwise, it prints a **persistent result line** (won’t be overwritten).
 
 ## Install (PyPI)
@@ -23,25 +39,6 @@ git clone https://github.com/hunhee99/statusline.git
 cd statusline
 python -m pip install -e .
 ```
-
-Tip: If you're using a specific interpreter/venv, always install with that same Python:
-
-```bash
-python -m pip install -e .
-```
-
-## Versioning / Release Notes
-
-- PyPI publishes versioned releases. Install a specific version like:
-
-```bash
-python -m pip install statusline==X.Y.Z
-```
-
-- Git tags match released versions. Check tags or release notes on GitHub if you need
-changelogs or want to pin a specific release.
-
-- Note: `0.1.1` removes the `enabled` argument from `StatusLine` to simplify behavior.
 
 ## Usage
 
