@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "statusline"
+version = "0.1.0"
+description = "Tiny single-line status updater for CLI"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+  {name = "Hunhee Choi", email = "hunhee9982@gmail.com"}
+]
+keywords = ["cli", "terminal", "progress", "status", "logging", "tqdm"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/hunhee99/statusline"
+Repository = "https://github.com/hunhee99/statusline"
+Issues = "https://github.com/hunhee99/statusline/issues"

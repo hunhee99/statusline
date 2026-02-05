@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+statusline/__init__.py
+statusline/core.py
+statusline.egg-info/PKG-INFO
+statusline.egg-info/SOURCES.txt
+statusline.egg-info/dependency_links.txt
+statusline.egg-info/top_level.txt
